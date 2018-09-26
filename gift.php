@@ -12,6 +12,8 @@
 	
 	<script>
 		FL_API_URL = '<?php echo FL_API_URL?>';
+		SOFTWARE = '<?php echo SOFTWARE?>';
+		SITE = '<?php echo SITE?>';
 	</script>
 </head>
 <body>

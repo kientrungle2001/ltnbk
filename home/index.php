@@ -109,17 +109,17 @@
 <div id="thithu" class="full">
 	<div class="container">
 		<div class="text-center heading mt-2 mb-4 text-white">
-			Thi thử Trần Đại Nghĩa 
+			Thi thử Nguyễn Bỉnh Khiêm 
 		</div>
 	</div>
 	<div class="container">
 		<div class="row" ng-init="selectedTestSetPage = 0">
 			<div class="box-thithu bg-white full-xs" ng-repeat="testSet in testSets | orderBy: 'ordering'" ng-show="inPage($index, selectedTestSetPage, 15)">
-				<h3 class="text-center head-box"><a href="/testSet.php?category_id=1413&test_set_id={{testSet.id}}">{{translate(testSet, 'test.name')}}</a></h3>
+				<h3 class="text-center head-box"><a href="/testSet.php?category_id=1416&test_set_id={{testSet.id}}">{{translate(testSet, 'test.name')}}</a></h3>
 				<div class="box-body">
 
 					<div class="link-box text-center" ng-repeat="test in testSet.children | orderBy: 'ordering'">
-						<a href="/testSet.php?category_id=1413&test_set_id={{testSet.id}}&test_id={{test.id}}" class="text-color">
+						<a href="/testSet.php?category_id=1416&test_set_id={{testSet.id}}&test_id={{test.id}}" class="text-color">
 							{{translate(test, 'test.name')}}  
 							<span ng-show="test.trial==1" class="badge badge-pill badge-danger">Free</span>
 						</a>
@@ -142,7 +142,7 @@
 	</div>
 </div>
 <!--end thithu -->	
-<div class="full bg3">
+<!-- <div class="full bg3">
 	<div class="text-white text-center mt-2 mb-3  heading">
 		Đề thi Trần Đại Nghĩa các năm
 	</div>
@@ -163,7 +163,7 @@
 			</div>
 		</div>
 	</div>
-</div>
+</div> -->
 <!--end-->
 <img src="/assets/images/lydo.png" alt="" class="full" />
 
@@ -437,3 +437,7 @@
 		</div>
 	</div>
 </div>
+<script>	
+		SOFTWARE = '<?php echo SOFTWARE?>';
+		SITE = '<?php echo SITE?>';
+</script>

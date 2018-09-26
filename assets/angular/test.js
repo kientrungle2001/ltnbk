@@ -20,7 +20,9 @@ flApp.controller('TestController', ['$scope', function($scope) {
 		type: 'post',
 		url: FL_API_URL +'/common/getTests', 
 		data: {
-			categoryId: '1412'
+			categoryId: '1412',
+			software: SOFTWARE,
+			site: SITE
 		},
 		dataType: 'json',
 		success: function(resp) {
@@ -33,7 +35,9 @@ flApp.controller('TestController', ['$scope', function($scope) {
 		type: 'post',
 		url: FL_API_URL +'/common/getTests', 
 		data: {
-			categoryId: '1411'
+			categoryId: '1411',
+			software: SOFTWARE,
+			site: SITE
 		},
 		dataType: 'json',
 		success: function(resp) {
@@ -46,7 +50,9 @@ flApp.controller('TestController', ['$scope', function($scope) {
 		type: 'post',
 		url: FL_API_URL +'/common/getTestSets', 
 		data: {
-			categoryId: '1413'
+			categoryId: '1416',
+			software: SOFTWARE,
+			site: SITE
 		},
 		dataType: 'json',
 		success: function(resp) {
@@ -59,7 +65,9 @@ flApp.controller('TestController', ['$scope', function($scope) {
 		type: 'post',
 		url: FL_API_URL +'/common/getTestSets', 
 		data: {
-			categoryId: '1414'
+			categoryId: '1414',
+			software: SOFTWARE,
+			site: SITE
 		},
 		dataType: 'json',
 		success: function(resp) {
@@ -149,7 +157,9 @@ flApp.controller('TestController', ['$scope', function($scope) {
 		type: 'post',
 		url: FL_API_URL +'/common/getTests', 
 		data: {
-			categoryId: u.searchParams.get('category_id')
+			categoryId: u.searchParams.get('category_id'),
+			software: SOFTWARE,
+			site: SITE
 		},
 		dataType: 'json',
 		success: function(resp) {
@@ -277,7 +287,9 @@ flApp.controller('TestController', ['$scope', function($scope) {
 				parentTest: 0,
 				test_name: $scope.selectedTest.name,
 				test_name_sn: $scope.selectedTest.name_sn,
-				lang: $scope.language || 'en'
+				lang: $scope.language || 'en',
+				software: SOFTWARE,
+				site: SITE
 			},
 			success: function(resp) {
 				
@@ -349,6 +361,8 @@ flApp.controller('TestController', ['$scope', function($scope) {
 			return false;
 		}
 		$scope.register.url = url;
+		$scope.register.software = SOFTWARE;
+		$scope.register.site = SITE;
 		if ($scope.register.password == $scope.register.repassword) {
 			jQuery.post(FL_API_URL + '/register/userRegister', $scope.register, function (resp) {
 				$scope.register.success = resp.success;
@@ -372,6 +386,8 @@ flApp.controller('TestController', ['$scope', function($scope) {
 			return false;
 		}
 		$scope.login.url = url;
+		$scope.login.software = SOFTWARE;
+		$scope.login.site = SITE;
 		jQuery.post(FL_API_URL + '/login/userLogin', $scope.login, function (resp) {
 			$scope.login.success = resp.success;
 			$scope.login.message = resp.message;

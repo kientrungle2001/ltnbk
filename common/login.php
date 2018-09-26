@@ -135,3 +135,7 @@
 	padding: 15px;
 }
 </style>
+<script>	
+		SOFTWARE = '<?php echo SOFTWARE?>';
+		SITE = '<?php echo SITE?>';
+</script>

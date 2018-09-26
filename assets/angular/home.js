@@ -48,6 +48,8 @@ flApp.controller('HomeController', ['$scope', function($scope) {
 			return false;
 		}		
 		$scope.register.url = url;
+		$scope.register.software = SOFTWARE;
+		$scope.register.site = SITE;
 		if($scope.register.password == $scope.register.repassword){
 			jQuery.post(FL_API_URL+'/register/userRegister',$scope.register, function(resp) {
 				$scope.register.success = resp.success;
@@ -71,6 +73,8 @@ flApp.controller('HomeController', ['$scope', function($scope) {
 			return false;
 		}
 		$scope.login.url = url;
+		$scope.login.software = SOFTWARE;
+		$scope.login.site = SITE;
 		jQuery.post(FL_API_URL+'/login/userLogin', $scope.login, function(resp) {
 			$scope.login.success = resp.success;
 			$scope.login.message = resp.message;
@@ -97,7 +101,9 @@ flApp.controller('HomeController', ['$scope', function($scope) {
 		type: 'post',
 		url: FL_API_URL +'/common/getTests', 
 		data: {
-			categoryId: '1412'
+			categoryId: '1412',
+			software: SOFTWARE,
+			site: SITE
 		},
 		dataType: 'json',
 		success: function(resp) {
@@ -110,7 +116,9 @@ flApp.controller('HomeController', ['$scope', function($scope) {
 		type: 'post',
 		url: FL_API_URL +'/common/getTests', 
 		data: {
-			categoryId: '1411'
+			categoryId: '1411',
+			software: SOFTWARE,
+			site: SITE
 		},
 		dataType: 'json',
 		success: function(resp) {
@@ -123,7 +131,9 @@ flApp.controller('HomeController', ['$scope', function($scope) {
 		type: 'post',
 		url: FL_API_URL +'/common/getTestSets', 
 		data: {
-			categoryId: '1413'
+			categoryId: '1416',
+			software: SOFTWARE,
+			site: SITE
 		},
 		dataType: 'json',
 		success: function(resp) {
@@ -136,7 +146,9 @@ flApp.controller('HomeController', ['$scope', function($scope) {
 		type: 'post',
 		url: FL_API_URL +'/common/getTestSets', 
 		data: {
-			categoryId: '1414'
+			categoryId: '1414',
+			software: SOFTWARE,
+			site: SITE
 		},
 		dataType: 'json',
 		success: function(resp) {
@@ -150,7 +162,9 @@ flApp.controller('HomeController', ['$scope', function($scope) {
 	$scope.registerForAdvice = function() {
 		if(!$scope.advice.name || !$scope.advice.phone || !$scope.advice.email){
 			return false;
-		} 
+		}
+		$scope.advice.software= SOFTWARE;
+		$scope.advice.site= SITE; 
 		jQuery.post(FL_API_URL+'/common/createConsultant',$scope.advice, function(resp) {
 			if(resp){				
 				$scope.advice.success= resp.success;

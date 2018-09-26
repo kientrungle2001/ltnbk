@@ -39,4 +39,8 @@
 			<li ng-repeat="newsRelate in newsRelates"><a href="/news_detail.php?id={{newsRelate.id}}">{{newsRelate.title}}</a></li>
 		</ul>
 	</div>
-</div>		
+</div>	
+<script>	
+		SOFTWARE = '<?php echo SOFTWARE?>';
+		SITE = '<?php echo SITE?>';
+</script>	

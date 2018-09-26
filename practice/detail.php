@@ -392,4 +392,6 @@ function read_question(elem, url) {
     });
 	
 }
+SOFTWARE = '<?php echo SOFTWARE?>';
+SITE = '<?php echo SITE?>';
 </script>

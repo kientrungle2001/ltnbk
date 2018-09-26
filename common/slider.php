@@ -65,5 +65,6 @@
     }
   }, 100);
 
- 
+ SOFTWARE = '<?php echo SOFTWARE?>';
+    SITE = '<?php echo SITE?>';
 </script>

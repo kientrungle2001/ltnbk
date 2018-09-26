@@ -29,3 +29,7 @@
 		<p class="text-center">( Phần mềm ôn tập chương trình TV Tiểu học)</p>
 	</div>
 </a>
+<script>	
+		SOFTWARE = '<?php echo SOFTWARE?>';
+		SITE = '<?php echo SITE?>';
+</script>

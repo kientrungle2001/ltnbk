@@ -1,6 +1,10 @@
 <style>
 	.fix-menu{margin-bottom: 15px;}
 </style>
+<script>	
+		SOFTWARE = '<?php echo SOFTWARE?>';
+		SITE = '<?php echo SITE?>';
+</script>
 <div class="full pt-3">
 	<div class="container">
 		<div class="full mb-3">

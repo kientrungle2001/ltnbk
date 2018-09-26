@@ -243,3 +243,7 @@
 .list-group-item.sub-active > a {color: #333;}
 .ptnn-title img {max-width: 100%}
 </style>
+<script>	
+		SOFTWARE = '<?php echo SOFTWARE?>';
+		SITE = '<?php echo SITE?>';
+</script>

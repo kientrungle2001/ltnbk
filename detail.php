@@ -13,6 +13,8 @@
 	<script>
 		FL_API_URL = '<?php echo FL_API_URL?>';
 		FL_URL = '<?php echo FL_URL?>';
+		SOFTWARE = '<?php echo SOFTWARE?>';
+		SITE = '<?php echo SITE?>';
 		subject_id = '<?php echo intval($_GET['subject_id']); ?>';
 		serverTime = <?php echo time() ?>;
 		

@@ -192,11 +192,11 @@
                     </div>
                 </li>
                 <li class="nav-item dropdown">
-                    <a href="/#thithu" class="nav-link dropdown-toggle">Thi thử Trần Đại Nghĩa</a>
+                    <a href="/#thithu" class="nav-link dropdown-toggle">Thi thử Nguyễn Bỉnh Khiêm</a>
                     <div style="right: 0px !important; left: auto;" class="mega dropdown-menu  p-3">
                         <div class="row" ng-init="selectedTestSetPage = 0">
                             <div class="w20p full-xs" ng-repeat="testSet in testSets | orderBy: 'ordering'" ng-show="inPage($index, selectedTestSetPage, 15)">
-                                <a class="full btn btn-primary mb-3 text-lta" href="/testSet.php?category_id=1413&test_set_id={{testSet.id}}">{{translate(testSet, 'test.name')}}</a>
+                                <a class="full btn btn-primary mb-3 text-lta" href="/testSet.php?category_id=1416&test_set_id={{testSet.id}}">{{translate(testSet, 'test.name')}}</a>
                                
                             </div>
                         </div>
@@ -228,3 +228,7 @@
     </nav>
 </div>
 <?php require 'login.php';?>
+<script>    
+        SOFTWARE = '<?php echo SOFTWARE?>';
+        SITE = '<?php echo SITE?>';
+</script>

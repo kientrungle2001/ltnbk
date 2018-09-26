@@ -71,7 +71,9 @@ flApp.controller('PracticeController', ['$scope', function($scope) {
 		type: 'post',
 		url: FL_API_URL +'/common/getTests', 
 		data: {
-			categoryId: '1412'
+			categoryId: '1412',
+			software: SOFTWARE,
+			site: SITE
 		},
 		dataType: 'json',
 		success: function(resp) {
@@ -84,7 +86,9 @@ flApp.controller('PracticeController', ['$scope', function($scope) {
 		type: 'post',
 		url: FL_API_URL +'/common/getTests', 
 		data: {
-			categoryId: '1411'
+			categoryId: '1411',
+			software: SOFTWARE,
+			site: SITE
 		},
 		dataType: 'json',
 		success: function(resp) {
@@ -97,7 +101,9 @@ flApp.controller('PracticeController', ['$scope', function($scope) {
 		type: 'post',
 		url: FL_API_URL +'/common/getTestSets', 
 		data: {
-			categoryId: '1413'
+			categoryId: '1416',
+			software: SOFTWARE,
+			site: SITE
 		},
 		dataType: 'json',
 		success: function(resp) {
@@ -110,7 +116,9 @@ flApp.controller('PracticeController', ['$scope', function($scope) {
 		type: 'post',
 		url: FL_API_URL +'/common/getTestSets', 
 		data: {
-			categoryId: '1414'
+			categoryId: '1414',
+			software: SOFTWARE,
+			site: SITE
 		},
 		dataType: 'json',
 		success: function(resp) {
@@ -186,7 +194,9 @@ flApp.controller('PracticeController', ['$scope', function($scope) {
 			type: 'post',
 			url: FL_API_URL +'/subject/getTopics', 
 			data: {
-				subject_id: subject_id
+				subject_id: subject_id,
+				software: SOFTWARE,
+				site: SITE
 			},
 			dataType: 'json',
 			success: function(resp) {
@@ -202,7 +212,9 @@ flApp.controller('PracticeController', ['$scope', function($scope) {
 			type: 'post',
 			url: FL_API_URL +'/subject/getVocabularies', 
 			data: {
-				subject_id: subject_id
+				subject_id: subject_id,
+				software: SOFTWARE,
+				site: SITE
 			},
 			dataType: 'json',
 			success: function(resp) {
@@ -234,7 +246,9 @@ flApp.controller('PracticeController', ['$scope', function($scope) {
 			dataType: 'json',
 			data: {
 				subject_id: subject_id,
-				topic_id: topic.id
+				topic_id: topic.id,
+				software: SOFTWARE,
+				site: SITE
 			},
 			success: function(resp) {
 				$scope.exerciseNums = [];
@@ -273,7 +287,9 @@ flApp.controller('PracticeController', ['$scope', function($scope) {
 			data: {
 				subject_id: subject_id,
 				topic_id: $scope.selectedTopic.id,
-				exercise_number: $scope.selectedExerciseNum + 1
+				exercise_number: $scope.selectedExerciseNum + 1,
+				software: SOFTWARE,
+				site: SITE
 			},
 			success: function(resp) {
 				$scope.step = 'startPractice';
@@ -481,7 +497,10 @@ flApp.controller('PracticeController', ['$scope', function($scope) {
 
 							jQuery.ajax({
 								type: "Post",
-								data: {documentId:documentId, gameType:gameType, cateId:cateId, dataWords: dataWords, allTrueWord: allTrueWord, page: $scope.gamePage},
+								data: {documentId:documentId, gameType:gameType, cateId:cateId, dataWords: dataWords, allTrueWord: allTrueWord, page: $scope.gamePage,
+								software: SOFTWARE,
+								site: SITE
+							},
 								url:'/document/game/vdragimg.php',
 								success: function(data){
 
@@ -553,7 +572,10 @@ flApp.controller('PracticeController', ['$scope', function($scope) {
 							}
 							jQuery.ajax({
 								type: "Post",
-								data: {documentId:documentId, gameType:gameType, cateId:cateId, dataWords: dataWords},
+								data: {documentId:documentId, gameType:gameType, cateId:cateId, dataWords: dataWords,
+								software: SOFTWARE,
+								site: SITE
+							},
 								url:'/document/game/sortword.php',
 								success: function(data){
 
@@ -588,7 +610,10 @@ flApp.controller('PracticeController', ['$scope', function($scope) {
 							}
 							jQuery.ajax({
 								type: "Post",
-								data: {documentId:documentId, gameType:gameType, cateId:cateId, dataWords: dataWords},
+								data: {documentId:documentId, gameType:gameType, cateId:cateId, dataWords: dataWords,
+								software: SOFTWARE,
+								site: SITE
+							},
 								url:'/document/game/dragtopart.php',
 								success: function(data){
 
@@ -663,7 +688,9 @@ flApp.controller('PracticeController', ['$scope', function($scope) {
 				startTime: startTime,
 				duringTime: duringTime,
 				stopTime: stopTime,
-				lang: $scope.language || 'en'
+				lang: $scope.language || 'en',
+				software: SOFTWARE,
+				site: SITE
 			},
 			success: function(resp) {
 				
@@ -758,6 +785,8 @@ flApp.controller('PracticeController', ['$scope', function($scope) {
 			return false;
 		}
 		$scope.register.url = url;
+		$scope.register.software = SOFTWARE;
+		$scope.register.site = SITE;
 		if ($scope.register.password == $scope.register.repassword) {
 			jQuery.post(FL_API_URL + '/register/userRegister', $scope.register, function (resp) {
 				$scope.register.success = resp.success;
@@ -781,6 +810,8 @@ flApp.controller('PracticeController', ['$scope', function($scope) {
 			return false;
 		}
 		$scope.login.url = url;
+		$scope.login.software = SOFTWARE;
+		$scope.login.site = SITE;
 		jQuery.post(FL_API_URL + '/login/userLogin', $scope.login, function (resp) {
 			$scope.login.success = resp.success;
 			$scope.login.message = resp.message;

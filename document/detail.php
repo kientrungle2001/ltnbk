@@ -55,3 +55,7 @@
 	height: 600px;
 }
 </style>
+<script>	
+		SOFTWARE = '<?php echo SOFTWARE?>';
+		SITE = '<?php echo SITE?>';
+</script>

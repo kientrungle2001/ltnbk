@@ -4,7 +4,9 @@ flApp.controller('TestController', ['$scope', function($scope) {
 		type: 'post',
 		url: FL_API_URL +'/common/getTests', 
 		data: {
-			categoryId: '354'
+			categoryId: '354',
+			software: SOFTWARE,
+			site: SITE
 		},
 		dataType: 'json',
 		success: function(resp) {

@@ -10,6 +10,8 @@ flApp.controller('AboutController', ['$scope', function($scope) {
 			return false;
 		}		
 		$scope.register.url = url;
+		$scope.register.software = SOFTWARE;
+		$scope.register.site = SITE;
 		if($scope.register.password == $scope.register.repassword){
 			jQuery.post(FL_API_URL+'/register/userRegister',$scope.register, function(resp) {
 				$scope.register.success = resp.success;
@@ -37,7 +39,9 @@ flApp.controller('AboutController', ['$scope', function($scope) {
 		type: 'post',
 		url: FL_API_URL +'/common/getTests', 
 		data: {
-			categoryId: '1412'
+			categoryId: '1412',
+			software: SOFTWARE,
+			site: SITE
 		},
 		dataType: 'json',
 		success: function(resp) {
@@ -50,7 +54,9 @@ flApp.controller('AboutController', ['$scope', function($scope) {
 		type: 'post',
 		url: FL_API_URL +'/common/getTests', 
 		data: {
-			categoryId: '1411'
+			categoryId: '1411',
+			software: SOFTWARE,
+			site: SITE
 		},
 		dataType: 'json',
 		success: function(resp) {
@@ -63,7 +69,9 @@ flApp.controller('AboutController', ['$scope', function($scope) {
 		type: 'post',
 		url: FL_API_URL +'/common/getTestSets', 
 		data: {
-			categoryId: '1413'
+			categoryId: '1416',
+			software: SOFTWARE,
+			site: SITE
 		},
 		dataType: 'json',
 		success: function(resp) {
@@ -76,7 +84,9 @@ flApp.controller('AboutController', ['$scope', function($scope) {
 		type: 'post',
 		url: FL_API_URL +'/common/getTestSets', 
 		data: {
-			categoryId: '1414'
+			categoryId: '1414',
+			software: SOFTWARE,
+			site: SITE
 		},
 		dataType: 'json',
 		success: function(resp) {
@@ -116,6 +126,8 @@ flApp.controller('AboutController', ['$scope', function($scope) {
 			return false;
 		}
 		$scope.login.url = url;
+		$scope.login.software = SOFTWARE;
+		$scope.login.site = SITE;
 		jQuery.post(FL_API_URL+'/login/userLogin', $scope.login, function(resp) {
 			$scope.login.success = resp.success;
 			$scope.login.message = resp.message;
@@ -137,6 +149,8 @@ flApp.controller('AboutController', ['$scope', function($scope) {
 		if(!$scope.order.fullname|| !$scope.order.quantity || !$scope.order.phone || !$scope.order.address ){
 			return false;
 		}
+		$scope.order.software = SOFTWARE;
+		$scope.order.site = SITE;
 		jQuery.post(FL_API_URL+'/payment/orderCard', $scope.order, function(data) {
 			
 		  	if(data) {
@@ -161,6 +175,8 @@ flApp.controller('AboutController', ['$scope', function($scope) {
 			}
 			$scope.paycard.userId = sessionUserId;	
 			$scope.paycard.username = sessionUsername;
+			$scope.paycard.software = SOFTWARE;	
+			$scope.paycard.site = SITE;
 
 			jQuery.post(FL_API_URL+'/payment/payCard', $scope.paycard, function(dataResult) {
 			  	if(dataResult) {
@@ -279,31 +295,21 @@ flApp.controller('AboutController', ['$scope', function($scope) {
 					</tr>\
 					<tr>\
 						<td><b>4.</b></td>\
-						<td><b>Phần Thi thử Trần Đại Nghĩa</b></td>\
+						<td><b>Phần Thi thử Nguyễn Bỉnh Khiêm</b></td>\
 						<td>\
-						- Bao gồm <b> 30 đề thi Trắc nghiệm và 30 đề Tự luận bám sát cấu trúc đề khảo sát vào trường Trần Đại Nghĩa </b>đã được Sở Giáo dục và Đào tạo Thành phố Hồ Chí Minh công bố tháng 4 năm 2015.	\
+						- Bao gồm <b> 30 đề thi Trắc nghiệm và 30 đề Tự luận bám sát cấu trúc đề khảo sát vào trường Nguyễn Bỉnh Khiêm </b>.	\
 						\
 						</td>\
 					</tr>\
 					<tr>\
 						<td><b>5.</b></td>\
-						<td><b>Phần Đề thi chính thức vào trường Trần Đại Nghĩa các năm</b></td>\
-						<td>\
-						- Bao gồm các <b> đề thi Trắc nghiệm và đề Tự luận các năm của trường Trần Đại Nghĩa. \
-						\
-						</td>\
-					</tr>\
-					<tr>\
-						<td><b>6.</b></td>\
 						<td><b>Kinh nghiệm ôn thi</b></td>\
 						<td>\
 						Gồm nhiều nội dung :<br>\
 						- Cung cấp <b>Tài liệu tham khảo các môn học</b>:<br>\
 						+ Mỗi môn học đều có các bài đọc tham khảo bằng tiếng Anh và các câu hỏi hỗ trợ ôn tập kiến thức các thức các môn học bằng tiếng Việt.\
 						+ Đặc biệt, cung cấp hệ thống từ vựng cơ bản sắp xếp theo các chủ đề.\
-						- Tập hợp <b>đề thi các năm vào trường Trần Đại Nghĩa</b>.<br>\
-						- Giới thiệu <b>các Trung tâm uy tín ôn thi</b> vào trường Trần Đại Nghĩa.<br>\
-						- Trao đổi các <b>kinh nghiệm ôn thi</b> vào trường Trần Đại Nghĩa (Mục hỏi đáp kinh nghiệm ôn thi).\
+						- Trao đổi các <b>kinh nghiệm ôn thi</b> vào trường Nguyễn Bỉnh Khiêm (Mục hỏi đáp kinh nghiệm ôn thi).\
 \
 \
 						</td>\
@@ -319,9 +325,7 @@ flApp.controller('AboutController', ['$scope', function($scope) {
 \
 					<li>- Tra cứu từ điển Anh Việt ngay trong phần mềm.</li>\
 \
-					<li>- Tất cả các câu hỏi luyện tập và đề thi thử đều có đáp án.</li>\
-\
-					<li>- Nhiều đáp án có phần lí giải bằng tiếng Việt (được thiết kế dành riêng cho học sinh thi vào lớp 6 Trường THPT Chuyên Trần Đại Nghĩa)</li>\
+					<li>- Tất cả các câu hỏi luyện tập và đề thi thử đều có đáp án, lý giải.</li>\
 \
 					<li>-Sản phẩm luôn luôn được nâng cấp, cập nhật cả về số lượng câu hỏi và dạng bài ôn tập.</li>\
 				</ul>',

@@ -153,11 +153,9 @@
 				    <a class="nav-link" id="deluyentap-tab" data-toggle="tab" href="#deluyentap" role="tab" aria-controls="deluyentap" aria-selected="false">Ôn luyện tổng hợp</a>
 				  </li>
 				  <li class="nav-item">
-				    <a class="nav-link" id="thithu-tab" data-toggle="tab" href="#thithu" role="tab" aria-controls="thithu" aria-selected="false">Thi thử Trần Đại Nghĩa</a>
+				    <a class="nav-link" id="thithu-tab" data-toggle="tab" href="#thithu" role="tab" aria-controls="thithu" aria-selected="false">Thi thử Nguyễn Bỉnh Khiêm</a>
 				  </li>	
-				  <li class="nav-item">
-				    <a class="nav-link" id="tdn-tab" data-toggle="tab" href="#tdn" role="tab" aria-controls="tdn" aria-selected="false">Đề thi Trần Đại Nghĩa các năm</a>
-				  </li>	
+				  
 				  <li class="nav-item">
 				    <a class="nav-link" id="testAll-tab" data-toggle="tab" href="#testAll" role="tab" aria-controls="tdn" aria-selected="false">Tất cả</a>
 				  </li>			  
@@ -428,4 +426,6 @@
 		}
   		reader.readAsDataURL(userAvatar.files[0]);
 	}
+	SOFTWARE = '<?php echo SOFTWARE?>';
+	SITE = '<?php echo SITE?>';
 </script>

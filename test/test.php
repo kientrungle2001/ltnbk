@@ -213,3 +213,7 @@
 .list-group-item.sub-active > a {color: #333;}
 .inline {display: inline;}
 </style>
+<script>	
+		SOFTWARE = '<?php echo SOFTWARE?>';
+		SITE = '<?php echo SITE?>';
+</script>

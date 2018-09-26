@@ -11,8 +11,10 @@
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css" />
 	<script>
 		FL_API_URL = '<?php echo FL_API_URL?>';
-		userId = 8;
-		checkPayment = true;
+		SOFTWARE = '<?php echo SOFTWARE?>';
+		SITE = '<?php echo SITE?>';
+		/*userId = 8;
+		checkPayment = true;*/
 	</script>
 </head>
 <body>

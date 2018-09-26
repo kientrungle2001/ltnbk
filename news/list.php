@@ -17,4 +17,8 @@
 			</div>
 		</div>
 	</div>
-</div>		
+</div>	
+<script>	
+		SOFTWARE = '<?php echo SOFTWARE?>';
+		SITE = '<?php echo SITE?>';
+</script>	
