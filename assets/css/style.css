@@ -16,7 +16,7 @@ body{font-family: 'Roboto';}
 .select-top{border: none; background: #6dccfd;}
 .main-menu ul{font-family: iCiel;}
 
-.main-menu ul li a{text-transform: uppercase; font-size: 16px;}
+.main-menu ul li a{text-transform: uppercase; font-size: 15px;}
 .main-menu ul li:nth-child(1) a{color: #e3a037;}
 .main-menu ul li:nth-child(2) a{color: #eb4f56;}
 .main-menu ul li:nth-child(3) a{color: #ac61ec;}
