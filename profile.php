@@ -27,7 +27,7 @@
 	<?php include('profile/detail.php'); ?>
 	
 	<?php include('common/footer.php'); ?>
-	<script src="/assets/angular/profile.js"></script>
+	<script src="/assets/angular/profile.js?t=<?php echo time(); ?>"></script>
 </body>
 </html>
 <?php } ?>

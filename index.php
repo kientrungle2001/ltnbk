@@ -22,6 +22,6 @@
 	<?php include('common/slider.php'); ?>
 	<?php include('home/index.php'); ?>
 	<?php include('common/footer.php'); ?>
-	<script src="/assets/angular/home.js"></script>
+	<script src="/assets/angular/home.js?t=<?php echo time(); ?>"></script>
 </body>
 </html>

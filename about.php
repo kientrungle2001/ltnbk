@@ -21,6 +21,6 @@
 	<?php include('common/header.php'); ?>
 	<?php include('home/pay.php'); ?>
 	<?php include('common/footer.php'); ?>
-	<script src="/assets/angular/about.js"></script>
+	<script src="/assets/angular/about.js?t=<?php echo time(); ?>"></script>
 </body>
 </html>

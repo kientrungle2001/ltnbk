@@ -50,15 +50,15 @@
                     <li class="nav-item">
                         <img src="/assets/images/hotline.png"/> Hotline: 0936 738 986
                     </li>
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         &nbsp;
                         <select class="select-top" ng-model="language" ng-change="changeLanguage()">
                             <option value="" ng-selected="language==''" disabled="disabled">{{translate('Select language')}}</option>
-							<option value="en" ng-selected="language=='en'">English</option>
-							<option value="vn" ng-selected="language=='vn'">Tiếng Việt</option>
+                                                <option value="en" ng-selected="language=='en'">English</option>
+                                                <option value="vn" ng-selected="language=='vn'">Tiếng Việt</option>
                             <option value="ev" ng-selected="language=='ev'">Song ngữ</option>
                         </select>
-                    </li>
+                    </li> -->
                     <!-- <li class="nav-item">
                          &nbsp;
                         <select class="select-top" ng-model="grade" ng-change="changeGrade()">
@@ -119,14 +119,14 @@
 						<li><a href="/news_list.php?id=147">Hướng dẫn sử dụng</a></li>
 					</ul>
                 </li>
-                <li class="nav-item dropdown">
-					<a href="#" data-toggle="dropdown" class="dropdown-toggle nav-link">Chọn Ngôn Ngữ</a>
-					<ul class="dropdown-menu">
-						<li style="padding-left: 25px;" ng-click="language='en';selectLanguage('en')"><a href="#">Tiếng Anh</a></li>
-						<li><a href="#" ng-click="language='vn';selectLanguage('vn')">Tiếng Việt</a></li>
-						<li><a href="#" ng-click="language='ev';selectLanguage('ev')">Song Ngữ</a></li>
-					</ul>
-				</li>
+                <!-- <li class="nav-item dropdown">
+                                    <a href="#" data-toggle="dropdown" class="dropdown-toggle nav-link">Chọn Ngôn Ngữ</a>
+                                    <ul class="dropdown-menu">
+                                        <li style="padding-left: 25px;" ng-click="language='en';selectLanguage('en')"><a href="#">Tiếng Anh</a></li>
+                                        <li><a href="#" ng-click="language='vn';selectLanguage('vn')">Tiếng Việt</a></li>
+                                        <li><a href="#" ng-click="language='ev';selectLanguage('ev')">Song Ngữ</a></li>
+                                    </ul>
+                                </li> -->
                 
                 <li class="nav-item dropdown">
                     <a href="/#practice" class="nav-link dropdown-toggle">Luyện các môn</a>

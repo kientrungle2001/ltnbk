@@ -32,6 +32,6 @@
 	<?php include('common/header.php'); ?>
 	<?php include('practice/detail.php'); ?>
 	<?php include('common/footer.php'); ?>
-	<script src="/assets/angular/practice.js?t=1"></script>
+	<script src="/assets/angular/practice.js?t=<?php echo time(); ?>"></script>
 </body>
 </html>

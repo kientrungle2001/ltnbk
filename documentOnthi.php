@@ -19,6 +19,6 @@
 	<?php include('common/header.php'); ?>
 	<?php include('document/onthi.php'); ?>
 	<?php include('common/footer.php'); ?>
-	<script src="/assets/angular/documentOnthi.js"></script>
+	<script src="/assets/angular/documentOnthi.js?t=<?php echo time(); ?>"></script>
 </body>
 </html>

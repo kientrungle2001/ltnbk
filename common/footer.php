@@ -169,7 +169,7 @@
 	<script src="/assets/array.js"></script>
 	<!--script src="/assets/js/locks.js"></script-->
 
-	<script src="/assets/angular/app.js"></script>
+	<script src="/assets/angular/app.js?t=<?php echo time(); ?>"></script>
 	<script language="JavaScript">
 		<!--
 		var dictionaries = "ev_ve";

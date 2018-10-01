@@ -21,6 +21,6 @@
 	<?php include('common/header.php'); ?>
 	<?php include('news/detail.php'); ?>
 	<?php include('common/footer.php'); ?>
-	<script src="/assets/angular/newsDetail.js"></script>
+	<script src="/assets/angular/newsDetail.js?t=<?php echo time(); ?>"></script>
 </body>
 </html>

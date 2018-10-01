@@ -19,6 +19,6 @@
 	<?php include('common/header.php'); ?>
 	<?php include('document/list.php'); ?>
 	<?php include('common/footer.php'); ?>
-	<script src="/assets/angular/documentList.js"></script>
+	<script src="/assets/angular/documentList.js?t=<?php echo time(); ?>"></script>
 </body>
 </html>

@@ -71,8 +71,8 @@
 							    </div>
 							    <div class="form-group col-md-3">
 							      <label for="input">Tỉnh(TP): </label>
-							      <select ng-model="userDetail.areacode"class="form-control">
-							        <option value="{{areaCode.id}}" ng-repeat="areaCode in areaCodes" required ng-selected="areaCode.id==userDetail.areacode">{{areaCode.name}}</option>						        
+							      <select ng-model="userDetail.areacode" class="form-control">
+							        <option value="{{areaCode.id}}" ng-repeat="areaCode in areaCodes" required >{{areaCode.name}}</option>						        
 							      </select>
 							    </div>
 							  </div>
@@ -173,7 +173,7 @@
 					      <th scope="col" style="width: 30%;">Chủ đề</th>
 					      <th scope="col">Bài</th>
 					      <th scope="col">Điểm</th>
-					      <th scope="col">Ngôn ngữ</th>
+					      
 					      <th scope="col">Thời gian làm bài</th>
 					      <th scope="col">Ngày</th>
 					      
@@ -186,7 +186,7 @@
 					      <td ng-bind="lesson.name"></td>
 					      <td><a href="/book.php?id={{lesson.id}}">Bài {{lesson.exercise_number}}</a></td>
 					      <td ng-bind="lesson.mark"></td>
-					      <td ng-bind="lesson.lang"></td>
+					      
 					      <td ng-bind="lesson.duringTime"></td>
 					      <td >{{lesson.startTime| date:'MM/dd/yyyy @ h:mma'}}</td>
 					    </tr>					    
@@ -214,7 +214,7 @@
 					      <th scope="col">#</th>
 					      <th scope="col">Đề thi</th>					      
 					      <th scope="col">Điểm</th>
-					      <th scope="col">Ngôn ngữ</th>
+					      
 					      <th scope="col">Thời gian làm bài</th>
 					      <th scope="col">Ngày</th>
 					      
@@ -225,7 +225,7 @@
 					      <th scope="row">{{$index +1}}</th>
 					      <td><a href="/book.php?id={{test.id}}">{{test.name}}</a></td>
 					      <td ng-bind="test.mark"></td>
-					      <td ng-bind="test.lang"></td>
+					      
 					      <td ng-bind="test.duringTime"></td>
 					      <td >{{test.startTime| date:'MM/dd/yyyy @ h:mma'}}</td>
 					      
@@ -255,7 +255,7 @@
 					      <th scope="col">#</th>
 					      <th scope="col">Đề thi</th>					      
 					      <th scope="col">Điểm</th>
-					      <th scope="col">Ngôn ngữ</th>
+					      
 					      <th scope="col">Thời gian làm bài</th>
 					      <th scope="col">Ngày</th>
 					      
@@ -266,7 +266,7 @@
 					      <th scope="row">{{$index +1}}</th>
 					      <td><a href="/book.php?id={{testE.id}}">{{testE.name}}</a></td>
 					      <td ng-bind="testE.mark"></td>
-					      <td ng-bind="testE.lang"></td>
+					      
 					      <td ng-bind="testE.duringTime"></td>
 					      <td >{{testE.startTime| date:'MM/dd/yyyy @ h:mma'}}</td>
 					      
@@ -296,7 +296,7 @@
 					      <th scope="col">#</th>
 					      <th scope="col">Đề thi</th>					      
 					      <th scope="col">Điểm</th>
-					      <th scope="col">Ngôn ngữ</th>
+					      
 					      <th scope="col">Thời gian làm bài</th>
 					      <th scope="col">Ngày</th>
 					      
@@ -307,7 +307,7 @@
 					      <th scope="row">{{$index +1}}</th>
 					      <td><a href="/book.php?id={{tdnTest.id}}">{{tdnTest.name}}</a></td>
 					      <td ng-bind="tdnTest.mark"></td>
-					      <td ng-bind="tdnTest.lang"></td>
+					      
 					      <td ng-bind="tdnTest.duringTime"></td>
 					      <td >{{tdnTest.startTime| date:'MM/dd/yyyy @ h:mma'}}</td>
 					      
@@ -329,46 +329,7 @@
 					</nav>
 				</div>
 
-				<div class="tab-pane fade bg-light" id="tdn" role="tabpanel" aria-labelledby="tdn-tab" >
-			  		Đề thi chính thức các năm
-			  		<table class="table table-bordered">
-					  <thead>
-					    <tr>
-					      <th scope="col">#</th>
-					      <th scope="col">Đề thi</th>					      
-					      <th scope="col">Điểm</th>
-					      <th scope="col">Ngôn ngữ</th>
-					      <th scope="col">Thời gian làm bài</th>
-					      <th scope="col">Ngày</th>
-					      
-					    </tr>
-					  </thead>
-					  <tbody>
-					    <tr ng-repeat="tdnRealTest in tdnRealTests">
-					      <th scope="row">{{$index +1}}</th>
-					      <td><a href="/book.php?id={{tdnRealTest.id}}">{{tdnRealTest.name}}</a></td>
-					      <td ng-bind="tdnRealTest.mark"></td>
-					      <td ng-bind="tdnRealTest.lang"></td>
-					      <td ng-bind="tdnRealTest.duringTime"></td>
-					      <td >{{tdnRealTest.startTime| date:'MM/dd/yyyy @ h:mma'}}</td>
-					      
-					    </tr>					    
-					    
-					  </tbody>
-					</table>
-					<nav aria-label="...">
-					  <ul class="pagination">
-					    <li class="page-item" ng-class="{'active': tdnRealTestPageSelected === 0}">					      
-					      	<a class="page-link"  ng-click="tdnRealTestPage(0)">Trang đầu</a>      
-					  	  
-					    </li>
-					    <li class="page-item" ng-class="{'active': tdnRealTestPageSelected === tdnRealTestitem}" ng-repeat="tdnRealTestitem in tdnRealTestQuantity">
-					    	<a class="page-link"   ng-click="tdnRealTestPage(tdnRealTestitem)">{{tdnRealTestitem +1}}</a>
-					    </li>					   
-					    
-					  </ul>
-					</nav>
-				</div>
+				
 
 				<div class="tab-pane fade bg-light" id="testAll" role="tabpanel" aria-labelledby="testAll-tab" >
 			  		Tổng hợp các bài thi
@@ -378,7 +339,7 @@
 					      <th scope="col">#</th>
 					      <th scope="col">Đề thi</th>					      
 					      <th scope="col">Điểm</th>
-					      <th scope="col">Ngôn ngữ</th>
+					      
 					      <th scope="col">Thời gian làm bài</th>
 					      <th scope="col">Ngày</th>
 					      
@@ -389,7 +350,7 @@
 					      <th scope="row">{{$index +1}}</th>
 					      <td><a href="/book.php?id={{testAll.id}}">{{testAll.name}}</a></td>
 					      <td ng-bind="testAll.mark"></td>
-					      <td ng-bind="testAll.lang"></td>
+					      
 					      <td ng-bind="testAll.duringTime"></td>
 					      <td >{{testAll.startTime| date:'MM/dd/yyyy @ h:mma'}}</td>
 					      

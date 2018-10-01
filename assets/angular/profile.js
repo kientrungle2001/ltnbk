@@ -1,6 +1,6 @@
 flApp.controller('ProfileController', ['$scope', function($scope) {
 	$scope.title = 'Công ty cổ phần giáo dục và phát triển trí tuệ sáng tạo Next Nobels';
-	$scope.language = window.localStorage.getItem('language') || 'en';
+	$scope.language = 'vn';
 	$scope.changeLanguage = function() {
 		window.localStorage.setItem('language', $scope.language);
 	}
@@ -150,9 +150,13 @@ flApp.controller('ProfileController', ['$scope', function($scope) {
 	// edit user
 	$scope.userDetail= {};
 	$scope.editUser = function(){
-		if(!$scope.userDetail){
+		/*if(!$scope.userDetail){
+			return false;
+		}*/
+		if(!$scope.userDetail.name || !$scope.userDetail.phone || !$scope.userDetail.address ){
 			return false;
 		}
+		//$scope.userDetail.areacode = '41';
 		$scope.userDetail.userId= sessionUserId;
 		jQuery.post(FL_API_URL+'/profile/editUser', $scope.userDetail, function(resp) {
 			
@@ -273,16 +277,16 @@ flApp.controller('ProfileController', ['$scope', function($scope) {
 	$scope.subjectNames = {};
 	$scope.getSubjects = function(){
 		var subjects= {};
-		subjects['s51'] = 'Mathematics';
-		subjects['s52'] = 'Science';
-		subjects['s164'] = 'English';
-		subjects['s157'] = 'Literature';
-		subjects['s53'] = 'History';
-		subjects['s50'] = 'Geography';
-		subjects['s87'] = 'Life Skills';
-		subjects['s59'] = 'Social Understanding';
-		subjects['s88'] = 'Observing Listening';
-		subjects['s54'] = 'Language And Communication';		
+		subjects['s51'] = 'Toán';
+		subjects['s52'] = 'Khoa học';
+		subjects['s164'] = 'Tiếng Anh';
+		subjects['s157'] = 'Văn học';
+		subjects['s53'] = 'Lịch sử';
+		subjects['s50'] = 'Địa lí';
+		subjects['s87'] = 'Kỹ năng sống';
+		subjects['s59'] = 'Hiểu biết xã hội';
+		subjects['s88'] = 'Kỹ năng nghe';
+		subjects['s54'] = 'Ngôn ngữ và giao tiếp';		
 		$scope.subjectNames = subjects;		
 	};
 	$scope.getSubjects();

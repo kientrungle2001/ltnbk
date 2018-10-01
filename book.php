@@ -22,6 +22,6 @@
 	<?php include('common/header.php'); ?>
 	<?php include('profile/book.php'); ?>	
 	<?php include('common/footer.php'); ?>
-	<script src="/assets/angular/book.js"></script>
+	<script src="/assets/angular/book.js?t=<?php echo time(); ?>"></script>
 </body>
 </html>

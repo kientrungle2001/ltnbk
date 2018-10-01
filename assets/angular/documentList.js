@@ -1,6 +1,6 @@
 flApp.controller('DocumentListController', ['$scope', function($scope) {
 	$scope.title = 'Công ty cổ phần giáo dục và phát triển trí tuệ sáng tạo Next Nobels';
-	$scope.language = window.localStorage.getItem('language') || 'en';
+	$scope.language = 'vn';
 	$scope.changeLanguage = function() {
 		window.localStorage.setItem('language', $scope.language);
 	}

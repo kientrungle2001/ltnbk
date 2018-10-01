@@ -29,6 +29,6 @@
 	<?php include('common/header.php'); ?>
 	<?php include('test/testSet.php'); ?>
 	<?php include('common/footer.php'); ?>
-	<script src="/assets/angular/testSet.js"></script>
+	<script src="/assets/angular/testSet.js?t=<?php echo time(); ?>"></script>
 </body>
 </html>

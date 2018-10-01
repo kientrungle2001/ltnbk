@@ -21,7 +21,7 @@
 	<?php include('common/header.php'); ?>
 	<?php include('game/index.php'); ?>
 	<?php include('common/footer.php'); ?>
-	<script src="/assets/angular/game.js"></script>
+	<script src="/assets/angular/game.js?t=<?php echo time(); ?>"></script>
 	<?php if(isset($_GET['gameType']) && isset($_GET['gameTopic']) && $_GET['gameType'] == 'muatu' ){ ?>
 	<script>
 		jQuery(function(){
